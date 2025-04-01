@@ -1,0 +1,9 @@
+.bg-custom{
+    background-color: #009688;
+}
+
+.navbar .nav-item:hover .nav-link{
+    background-color: aliceblue !important;
+    color: #009688 !important;
+    border-radius: 5px;
+}
