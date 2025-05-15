@@ -1,4 +1,4 @@
-package com.example.online_book_store.model;
+package com.example.Online_Book_Store.model;
 
 
 public class Ticket {
