@@ -1,4 +1,4 @@
 package com.example.Online_Book_Store.model;
 
-public class Book {
+public class Book 
 }
