@@ -43,3 +43,23 @@ An interactive web-based **Online Book Store** system built using JSP and Spring
 
 ## 📂 Project Structure (Basic)
 
+
+---
+
+## 🧪 How to Run
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/online-book-store.git
+
+## 🌱 Future Improvements
+
+- Migrate to a database (e.g., MySQL or PostgreSQL)
+- Enhance UI using modern frameworks (React/Bootstrap)
+- Role-based access control
+- Pagination and search filters
+- REST API support
+
+## 📜 License
+
+**This project is open-source and available under the MIT License.**
