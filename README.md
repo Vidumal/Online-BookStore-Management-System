@@ -41,16 +41,15 @@ An interactive web-based **Online Book Store** system built using JSP and Spring
 
 ---
 
-## 📂 Project Structure (Basic)
-
-
----
 
 ## 🧪 How to Run
 
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/yourusername/online-book-store.git
+ 
+2. **Open in IntelliJ IDEA**
+   - Ensure JDK 17 is installed
 
 ## 🌱 Future Improvements
 
