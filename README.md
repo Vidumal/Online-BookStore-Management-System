@@ -50,7 +50,15 @@ An interactive web-based **Online Book Store** system built using JSP and Spring
  
 2. **Open in IntelliJ IDEA**
    - Ensure JDK 17 is installed
+   - Import the project as a Maven or Spring Boot project
 
+3. **Configure SmartTomcat**
+   - Set the deployment directory to `webapp`
+   - Assign the correct context path (e.g., `/OnlineBookStore`)
+
+4. **Run the Application**
+    - Start SmartTomcat server
+    - Navigate to `http://localhost:8080/OnlineBookStore` in your browser
 ## 🌱 Future Improvements
 
 - Migrate to a database (e.g., MySQL or PostgreSQL)
