@@ -1,1 +1,45 @@
-# Online-BookStore-Management-System
+# 📚 Online Book Store
+
+An interactive web-based **Online Book Store** system built using JSP and Spring Boot, designed to handle book inventory, stationary management, offers, and support ticket handling. The system supports dynamic content updates using Linked Lists and offers efficient sorting using Quick Sort.
+
+## 🚀 Features
+
+### 1. User Management
+- **Register/Login**
+- **Profile Handling** – View, update, and delete user information
+
+### 2. Book Inventory Management
+- **Create** – Admin adds new books
+- **Read** – View book details (title, author, price, etc.)
+- **Delete** – Remove books
+- **Data Structure** – `LinkedList` for dynamic inventory and `Quick Sort` for sorting by price/rating
+
+### 3. Stationary Management
+- **Create / Read / Update / Delete**
+- **Data Structure** – `LinkedList` and `Quick Sort`
+
+### 4. Offers Management
+- **Create / Read / Update / Delete**
+- **Data Structure** – `LinkedList` and `Quick Sort`
+
+### 5. Help Desk / Support Tickets
+- **Create** – Users submit support requests
+- **Read / Update / Delete** – Admin manages and resolves tickets
+
+---
+
+## 🛠️ Technology Stack
+
+- **Backend:** JSP, Java (JDK 17), Spring Boot  
+- **Frontend:** HTML  
+- **Server:** Apache Tomcat (via IntelliJ using SmartTomcat)  
+- **IDE:** IntelliJ IDEA  
+- **Data Handling:** File-based storage (`books.txt`, `stationary.txt`, `offer.txt`, `ticket.txt`, `users.txt`, `payment.txt`)  
+- **Data Structures Used:**  
+  - `LinkedList` – for dynamic data handling  
+  - `Quick Sort` – for sorting inventory, offers, and stationaries
+
+---
+
+## 📂 Project Structure (Basic)
+
