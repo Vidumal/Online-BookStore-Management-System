@@ -1,3 +1,5 @@
+package com.example.Online_Book_Store.model;
+
 public class Book {
     private String id;
     private String name;
