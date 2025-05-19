@@ -4,12 +4,13 @@ public class Offer {
     private Integer id;
     private String description;
     private float save;
-    private String category;
+    private String category;   //books , stationary & books + stationary
     private String imagePath;
 
-    public Offer(){
+    public Offer(){    //default constructor
     }
 
+    //parameterized constructor
     public Offer(Integer id, String description, float save, String category, String imagePath) {
         this.id = id;
         this.description = description;
