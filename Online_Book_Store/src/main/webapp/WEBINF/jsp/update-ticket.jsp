@@ -11,7 +11,6 @@
     <title>Update Support Ticket</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body
         class="min-h-screen bg-cover bg-center"
         style="background-image: url('https://cdn.pixabay.com/photo/2017/08/07/01/40/books-2598503_1280.jpg');"
