@@ -56,4 +56,32 @@ public class TicketService {
         return String.valueOf(nextId);
     }
 
+    // Initializes the service by loading ticket data from file after bean creation
+    @PostConstruct
+    public void init() throws IOException {
+        File file = new File(FILE_PATH);
+        if (!file.exists()) return;
+
+        // Read each line from the ticket file and parse it into Ticket objects
+        List<String> lines = Files.readAllLines(Paths.get(FILE_PATH));
+        for (String line : lines) {
+            String[] p = line.split(",");
+
+            // Validate line format before creating Ticket object
+            if (p.length >= 5) {
+                Ticket t = new Ticket(
+                        p[0].trim(),
+                        p[1].trim(),
+                        p[2].trim(),
+                        p[3].trim(),
+                        p[4].trim()
+                );
+                append(t);
+            } else {
+                // Log invalid lines for debugging purposes
+                System.err.println("Skipping invalid line: " + line);
+            }
+        }
+    }
+
 }

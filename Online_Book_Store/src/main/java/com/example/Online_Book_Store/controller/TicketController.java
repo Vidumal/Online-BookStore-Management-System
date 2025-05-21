@@ -25,7 +25,6 @@ public class TicketController {
         return "add-ticket";
     }
 
-
     @PostMapping("/add")
     public String add(@ModelAttribute Ticket t, Model m) throws IOException {
         svc.addTicket(t);
@@ -48,6 +47,7 @@ public class TicketController {
         m.addAttribute("ticket", svc.getById(id));
         return "update-ticket";
     }
+
     // Changed from @PostMapping to @PutMapping and added @PathVariable for ID
     @PutMapping("/update/{id}")
     public String update(@PathVariable String id, @ModelAttribute Ticket t) throws IOException {
@@ -56,11 +56,10 @@ public class TicketController {
         svc.updateTicket(t);
         return "redirect:/ticket/admin";
     }
+
     @PostMapping("/delete/{id}")
     public String delete(@PathVariable String id) throws IOException {
         svc.deleteById(id);
         return "redirect:/ticket/admin";
     }
-
-
 }
