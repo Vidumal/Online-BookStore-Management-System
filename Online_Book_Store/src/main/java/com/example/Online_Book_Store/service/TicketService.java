@@ -101,4 +101,15 @@ public class TicketService {
         }
     }
 
+    // Retrieves all tickets from the in-memory linked list
+    public synchronized List<Ticket> getAll() {
+        List<Ticket> list = new ArrayList<>();
+        Node curr = head;
+        while (curr != null) {
+            list.add(curr.data);
+            curr = curr.next;
+        }
+        return list;
+    }
+
 }
