@@ -1,8 +1,8 @@
-package com.example.online_book_store.controller;
+package com.example.Online_Book_Store.controller;
 
-import com.example.online_book_store.constants.Constant;
-import com.example.online_book_store.model.Book;
-import com.example.online_book_store.service.BookService;
+import com.example.Online_Book_Store.constants.Constant;
+import com.example.Online_Book_Store.model.Book;
+import com.example.Online_Book_Store.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
