@@ -43,5 +43,11 @@ public class TicketController {
         return "admin-ticket";
     }
 
+    @GetMapping("/update/{id}")
+    public String showUpdate(@PathVariable String id, Model m) {
+        m.addAttribute("ticket", svc.getById(id));
+        return "update-ticket";
+    }
+
 
 }
