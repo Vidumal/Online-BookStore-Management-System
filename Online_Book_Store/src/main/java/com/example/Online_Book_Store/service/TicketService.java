@@ -163,4 +163,18 @@ public class TicketService {
     }
 
 
+    // Overwrites the ticket file with the current in-memory list
+    private void overwrite() throws IOException {
+        File file = new File(FILE_PATH);
+        file.getParentFile().mkdirs();
+
+        // Write all tickets back to the file
+        try (BufferedWriter w = new BufferedWriter(new FileWriter(file, false))) {
+            for (Ticket t : getAll()) {
+                w.write(csv(t));
+                w.newLine();
+            }
+        }
+    }
+
 }
