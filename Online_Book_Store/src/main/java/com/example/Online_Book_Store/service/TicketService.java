@@ -84,4 +84,21 @@ public class TicketService {
         }
     }
 
+    // Adds a new ticket with a unique ID and persists it to the file
+    public synchronized void addTicket(Ticket t) throws IOException {
+        String nextId = getNextId();
+        t.setId(nextId);
+        append(t);
+
+        // Ensure the data directory exists before writing
+        File file = new File(FILE_PATH);
+        file.getParentFile().mkdirs();
+
+        // Append the new ticket data to the file
+        try (BufferedWriter w = new BufferedWriter(new FileWriter(file, true))) {
+            w.write(csv(t));
+            w.newLine();
+        }
+    }
+
 }
