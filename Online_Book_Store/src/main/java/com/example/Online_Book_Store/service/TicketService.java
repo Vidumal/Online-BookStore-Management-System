@@ -140,4 +140,27 @@ public class TicketService {
         overwrite();
     }
 
+    // Deletes a ticket by ID and persists the updated list to file
+    public synchronized boolean deleteById(String id) throws IOException {
+        if (head == null) return false;
+
+        if (head.data.getId().equals(id)) {
+            // Deleting the head node
+            head = head.next;
+        } else {
+            Node prev = head, curr = head.next;
+            while (curr != null && !curr.data.getId().equals(id)) {
+                prev = curr;
+                curr = curr.next;
+            }
+            if (curr == null) return false; // Ticket not found
+            prev.next = curr.next; // Remove node from list
+        }
+
+        // Persist updated list to file
+        overwrite();
+        return true;
+    }
+
+
 }
