@@ -122,4 +122,22 @@ public class TicketService {
         return null; // Return null if not found
     }
 
+    // Updates the fields of an existing ticket and overwrites the file
+    public synchronized void updateTicket(Ticket t) throws IOException {
+        Node curr = head;
+        while (curr != null && !curr.data.getId().equals(t.getId())) {
+            curr = curr.next;
+        }
+        if (curr == null) return; // No matching ticket found
+
+        // Update ticket fields
+        curr.data.setUserEmail(t.getUserEmail());
+        curr.data.setSubject(t.getSubject());
+        curr.data.setMessage(t.getMessage());
+        curr.data.setStatus(t.getStatus());
+
+        // Persist changes to file
+        overwrite();
+    }
+
 }
