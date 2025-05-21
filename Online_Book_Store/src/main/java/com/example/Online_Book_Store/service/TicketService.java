@@ -112,4 +112,14 @@ public class TicketService {
         return list;
     }
 
+    // Retrieves a specific ticket by its ID
+    public synchronized Ticket getById(String id) {
+        Node curr = head;
+        while (curr != null) {
+            if (curr.data.getId().equals(id)) return curr.data;
+            curr = curr.next;
+        }
+        return null; // Return null if not found
+    }
+
 }
