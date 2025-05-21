@@ -177,4 +177,15 @@ public class TicketService {
         }
     }
 
+    // Converts a ticket object into a CSV-formatted string
+    private String csv(Ticket t) {
+        return String.join(",",
+                t.getId(),
+                t.getUserEmail(),
+                t.getSubject().replace(",", " "),  // Replace commas to avoid CSV issues
+                t.getMessage().replace(",", " "),
+                t.getStatus()
+        );
+    }
+
 }
