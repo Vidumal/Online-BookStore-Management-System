@@ -56,6 +56,11 @@ public class TicketController {
         svc.updateTicket(t);
         return "redirect:/ticket/admin";
     }
+    @PostMapping("/delete/{id}")
+    public String delete(@PathVariable String id) throws IOException {
+        svc.deleteById(id);
+        return "redirect:/ticket/admin";
+    }
 
 
 }
