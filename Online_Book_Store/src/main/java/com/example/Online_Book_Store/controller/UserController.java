@@ -1,4 +1,4 @@
-package com.example.online_book_store.controller;
+package com.example.Online_Book_Store.controller;
 
 
 import com.example.online_book_store.model.User;
