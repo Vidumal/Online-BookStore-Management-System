@@ -48,6 +48,14 @@ public class TicketController {
         m.addAttribute("ticket", svc.getById(id));
         return "update-ticket";
     }
+    // Changed from @PostMapping to @PutMapping and added @PathVariable for ID
+    @PutMapping("/update/{id}")
+    public String update(@PathVariable String id, @ModelAttribute Ticket t) throws IOException {
+        // Ensure that the ticket ID in the path variable is the same as the ticket object ID
+        t.setId(id);  // Set the ID to ensure we're updating the correct ticket
+        svc.updateTicket(t);
+        return "redirect:/ticket/admin";
+    }
 
 
 }
