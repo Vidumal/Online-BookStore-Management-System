@@ -131,7 +131,20 @@ public class OfferService {
 
         writer.close();
         System.out.println("saveOffers: Offers saved successfully.");
-
+    }
+    /**
+     * Insert offer into linked list without saving to file (used during initial load).
+     */
+    private void addOfferFromFile(Offer offer) {
+        Node newNode = new Node(offer);
+        if (head == null) {
+            head = newNode;
+        } else {
+            Node current = head;
+            while (current.next != null) current = current.next;
+            current.next = newNode;
+        }
     }
     
+
 }
