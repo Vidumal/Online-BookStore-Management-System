@@ -91,4 +91,47 @@ public class OfferService {
 
         saveOffers(); // Persist updated list to file
     }
+
+    //check if offer already exsists
+    private boolean offerExists(Offer offer) {
+        Node current = head;
+        while (current != null) {
+            if (current.offer.getId() == offer.getId() ||
+                    current.offer.getDescription().equals(offer.getDescription())) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
+
+    /**
+     * Persist all offers from the linked list to the file "data/offers.txt".
+     */
+    public void saveOffers() throws IOException {
+        File file = new File("data/offers.txt");
+        file.getParentFile().mkdirs(); // Ensure parent directories exist
+
+        BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+        Node current = head;
+
+        if (current == null) {
+            System.out.println("saveOffers: No offers to save.");
+        } else {
+            System.out.println("saveOffers: Saving offers to file...");
+        }
+        // Write each offer as a CSV line
+        while (current != null) {
+            Offer offer = current.offer;
+            writer.write(offer.getId() + "," + offer.getDescription() + "," +
+                    offer.getSave() + "," + offer.getCategory() + "," + offer.getImagePath());
+            writer.newLine();
+            current = current.next;
+        }
+
+        writer.close();
+        System.out.println("saveOffers: Offers saved successfully.");
+
+    }
+    
 }
