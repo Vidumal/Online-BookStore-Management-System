@@ -37,5 +37,11 @@ public class TicketController {
         return "add-ticket";
     }
 
+    @GetMapping("/admin")
+    public String list(Model m) {
+        m.addAttribute("tickets", svc.getAll());
+        return "admin-ticket";
+    }
+
 
 }
