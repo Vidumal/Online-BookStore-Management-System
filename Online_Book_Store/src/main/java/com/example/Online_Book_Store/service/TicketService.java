@@ -1,7 +1,6 @@
 package com.example.Online_Book_Store.service;
+
 import com.example.Online_Book_Store.model.Ticket;
-
-
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -11,8 +10,6 @@ import java.util.*;
 
 @Service
 public class TicketService {
-
-
     // File path where ticket data is stored
     private static final String FILE_PATH = "data/ticket.txt";
 
@@ -56,6 +53,8 @@ public class TicketService {
         return String.valueOf(nextId);
     }
 
+
+
     // Initializes the service by loading ticket data from file after bean creation
     @PostConstruct
     public void init() throws IOException {
@@ -83,6 +82,7 @@ public class TicketService {
             }
         }
     }
+
 
     // Adds a new ticket with a unique ID and persists it to the file
     public synchronized void addTicket(Ticket t) throws IOException {
@@ -162,6 +162,9 @@ public class TicketService {
         return true;
     }
 
+    // ======================== Helper Methods ========================
+
+
 
     // Overwrites the ticket file with the current in-memory list
     private void overwrite() throws IOException {
@@ -187,5 +190,4 @@ public class TicketService {
                 t.getStatus()
         );
     }
-
 }
