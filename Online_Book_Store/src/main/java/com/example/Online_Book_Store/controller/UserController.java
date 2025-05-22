@@ -125,11 +125,6 @@ public class UserController {
     }
 
 
-
-
-
-
-
     // Show logged-in user's role
     @GetMapping("/role")
     public String showUserRole(HttpSession session, Model model) {
