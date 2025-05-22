@@ -145,6 +145,132 @@ public class OfferService {
             current.next = newNode;
         }
     }
-    
+    /**
+     * Retrieve all offers from the linked list as a list of Offer objects.
+     */
+    public List<Offer> getAllOffers() {
+        List<Offer> offersList = new ArrayList<>();
+        Node current = head;
+        while (current != null) {
+            offersList.add(current.offer);
+            current = current.next;
+        }
+        return offersList;
+    }
 
+    /**
+     * Update an existing offer by ID. Save changes to the file.
+     */
+    public void updateOffer(Offer offer) throws IOException {
+        Node current = head;
+        boolean found = false;
+
+        while (current != null) {
+            if (current.offer.getId() == offer.getId()) {
+                // Update existing offer fields
+                current.offer.setDescription(offer.getDescription());
+                current.offer.setSave(offer.getSave());
+                current.offer.setCategory(offer.getCategory());
+                current.offer.setImagePath(offer.getImagePath());
+                found = true;
+                break;
+            }
+            current = current.next;
+        }
+
+        if (found) {
+            saveOffers();
+            System.out.println("Offer with ID " + offer.getId() + " updated and saved.");
+        } else {
+            System.out.println("Offer with ID " + offer.getId() + " not found.");
+        }
+    }
+
+    /**
+     * Delete an offer from the list by ID and save the updated list to file.
+     */
+    public void deleteOffer(int id) throws IOException {
+        if (head == null) return;
+
+        // If head needs to be removed
+        if (head.offer.getId() == id) {
+            head = head.next;
+        } else {
+            Node current = head;
+            while (current.next != null) {
+                if (current.next.offer.getId() == id) {
+                    current.next = current.next.next;
+                    break;
+                }
+                current = current.next;
+            }
+        }
+
+        saveOffers();
+        System.out.println("deleteOffer: Offer deleted and saved.");
+    }
+
+    /**
+     * Sorts the offers in descending order based on the 'save' value using QuickSort.
+     */
+    public void sortOffers() {
+        List<Offer> offerList = getAllOffers();
+        quickSort(offerList, 0, offerList.size() - 1);
+        rebuildLinkedList(offerList); // Rebuild the linked list from sorted list
+    }
+
+    /**
+     * Helper method to implement QuickSort on a list of Offer objects.
+     */
+    private void quickSort(List<Offer> offers, int low, int high) {
+        if (low < high) {
+            int pi = partition(offers, low, high); // Partition index
+            quickSort(offers, low, pi - 1);        // Sort left half
+            quickSort(offers, pi + 1, high);       // Sort right half
+        }
+    }
+
+    /**
+     * Partition method for QuickSort: rearranges elements around pivot.
+     */
+    private int partition(List<Offer> offers, int low, int high) {
+        float pivot = offers.get(high).getSave(); // Last element as pivot
+        int i = low - 1;
+
+        for (int j = low; j < high; j++) {
+            if (offers.get(j).getSave() >= pivot) {
+                i++;
+                Collections.swap(offers, i, j);
+            }
+        }
+
+        Collections.swap(offers, i + 1, high);
+        return i + 1;
+    }
+
+    /**
+     * Reconstructs the linked list from a sorted list of Offer objects.
+     */
+    private void rebuildLinkedList(List<Offer> sortedOffers) {
+        head = null;
+
+        for (Offer offer : sortedOffers) {
+            Node newNode = new Node(offer);
+            if (head == null) {
+                head = newNode;
+            } else {
+                Node current = head;
+                while (current.next != null) current = current.next;
+                current.next = newNode;
+            }
+        }
+    }
+
+    /**
+     * Getter for the next auto-increment ID.
+     */
+    public int getNextId() {
+        return nextId;
+    }
 }
+
