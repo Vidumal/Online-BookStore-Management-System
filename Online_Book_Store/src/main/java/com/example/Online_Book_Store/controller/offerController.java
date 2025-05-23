@@ -141,9 +141,7 @@ public class OfferController {
             return "update-offer"; // Return to the form in case of error
         }
     }
-
-
-
+    
     // Delete an offer
     @PostMapping("/delete/{id}")
     public String deleteOffer(@PathVariable int id) throws IOException {
