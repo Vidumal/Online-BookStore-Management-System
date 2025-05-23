@@ -5,4 +5,5 @@
 6,gjjvkvj,Supun@123,nimal@gmail.com,29,user,male
 7,Punsith Vidumal,VIDUroxx@2005,punsithvidumal@gmail.com,20,admin,male
 8,Punsith Vidumal,123,punsithvidumal@gmail.com,20,user,male
+7,Manudi,Manudi2004#,manudimithara@gmail.com,21,user,Female
 
