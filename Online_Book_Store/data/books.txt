@@ -1,0 +1,10 @@
+3,Light We can not See,Anthoney Doerr,10,1400.0,Translations,/images/3_B00DPM7TIG.jpg
+4,Sherlock Holmes,Arthur Conan Doyle,25,2000.0,Novels,/images/4_938549290X.jpg
+5,Rich Dad Poor Dad,Robert T. Kiyosaki,35,3600.0,Subject related,/images/5_1612681131.jpg
+6,Lord Of The Ring,J.R.R. Tolkien,15,2500.0,Novels,/images/6_33.jpg
+7,The Over Story,Richard Powers,22,1200.0,Child books,/images/7_40180098.jpg
+8,Hamlet,Rhodri Lewis,10,4000.0,Novels,/images/8_9780691166841.jpg
+9,The Let Them Theory,Mel Robins,12,3400.0,Subject related,/images/9_224117584.jpg
+10,It Ends With Us,Collen Hoover,5,2100.0,Novels,/images/10_images.jpeg
+11,Wild Trees,Richard Preston,4,1400.0,Child books,/images/11_170513.jpg
+12,The Last Cuentista,D. Barba Heguera,3,1900.0,Translations,/images/12_56817365.jpg
