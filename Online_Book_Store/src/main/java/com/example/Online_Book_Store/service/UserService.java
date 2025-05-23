@@ -1,6 +1,6 @@
-package com.example.online_book_store.service;
+package com.example.Online_Book_Store.service;
 
-import com.example.online_book_store.model.User;
+import com.example.Online_Book_Store.model.User;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
