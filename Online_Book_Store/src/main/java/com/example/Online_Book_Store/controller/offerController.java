@@ -6,16 +6,13 @@ import com.example.Online_Book_Store.service.OfferService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.nio.file.*;
 
 @Controller
 @RequestMapping("/offer")
-public class offerController {
+public class OfferController {
 
     private static final String IMAGE_DIR = Constant.IMAGE_DIR;
 
