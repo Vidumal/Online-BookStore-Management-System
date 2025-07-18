@@ -1,8 +1,8 @@
-package com.example.online_book_store.controller;
+package com.example.Online_Book_Store.controller;
 
 
-import com.example.online_book_store.model.User;
-import com.example.online_book_store.service.UserService;
+import com.example.Online_Book_Store.model.User;
+import com.example.Online_Book_Store.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,0 +1,4 @@
+5,ishani@gmail.com,stationary_related,wesrdtfgyjhkl;,resolved
+6,hansaka@gmail.com,books_related,Need maths books,pending
+7,hansaka@gmail.com,others,Need to improve customer service,resolved
+8,punsithvidumal@gmail.com,books_related,jaefaifejaffolba,pending
