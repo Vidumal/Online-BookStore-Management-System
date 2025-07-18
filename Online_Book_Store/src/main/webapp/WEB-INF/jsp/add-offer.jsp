@@ -32,6 +32,8 @@
         </div>
       </c:if>
 
+      
+      <%--@elvariable id="offer" type=""--%>
       <form:form
         modelAttribute="offer"
         method="post"
