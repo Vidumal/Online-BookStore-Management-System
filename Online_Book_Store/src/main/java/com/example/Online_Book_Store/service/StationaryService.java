@@ -1,7 +1,7 @@
-package com.example.Online_Book_Store.service;
+package com.example.online_book_store.service;
 
-import com.example.Online_Book_Store.model.Book;
-import com.example.Online_Book_Store.model.Stationary;
+import com.example.online_book_store.model.Book;
+import com.example.online_book_store.model.Stationary;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;

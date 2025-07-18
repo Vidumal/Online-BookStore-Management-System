@@ -1,4 +1,4 @@
-package com.example.Online_Book_Store.model;
+package com.example.online_book_store.model;
 
 public class Stationary {
     private String id;
@@ -32,4 +32,3 @@ public class Stationary {
     public String getImagePath() { return imagePath; }
     public void setImagePath(String imagePath) { this.imagePath = imagePath; }
 }
-

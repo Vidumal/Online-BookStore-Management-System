@@ -1,6 +1,6 @@
-package com.example.Online_Book_Store.config;
+package com.example.online_book_store.config;
 
-import com.example.Online_Book_Store.constants.Constant;
+import com.example.online_book_store.constants.Constant;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -14,8 +14,6 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         // Map /images/** to the external directory D:/Out Source Projects/online-book-store/data/images/
-        registry.addResourceHandler("/images/**")
-                .addResourceLocations(EXTERNAL_IMAGE_DIR);
+        registry.addResourceHandler("/images/**").addResourceLocations(EXTERNAL_IMAGE_DIR);
     }
 }
-

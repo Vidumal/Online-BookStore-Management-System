@@ -1,6 +1,6 @@
-package com.example.Online_Book_Store.service;
+package com.example.online_book_store.service;
 
-import com.example.Online_Book_Store.model.Offer;
+import com.example.online_book_store.model.Offer;
 import org.springframework.stereotype.Service;
 
 import java.io.*;
@@ -9,7 +9,7 @@ import java.util.*;
 @Service
 public class OfferService {
 
-    //LINKED LIST
+    // Head node of the custom linked list holding offers
     private Node head;
     Offer offer = new Offer();
     // Auto-increment ID tracker for assigning new offer IDs
@@ -18,6 +18,10 @@ public class OfferService {
     // Flag to ensure offers are only loaded from file once
     private boolean offersLoaded = false;
 
+    /**
+     * Inner class representing a node in a singly linked list.
+     * Each node holds an Offer object and a reference to the next node.
+     */
     private class Node {
         Offer offer;
         Node next;
@@ -28,6 +32,10 @@ public class OfferService {
         }
     }
 
+    /**
+     * Load offers from the "data/offers.txt" file.
+     * This method will only load once per service lifecycle.
+     */
     public void loadOffers() throws IOException {
         if (offersLoaded) return;
 
@@ -37,6 +45,7 @@ public class OfferService {
             System.out.println("No offers file found. Skipping load.");
             return;
         }
+
         BufferedReader reader = new BufferedReader(new FileReader(file));
         String line;
 
@@ -79,6 +88,7 @@ public class OfferService {
             System.out.println("Offer with ID or description already exists.");
             return;
         }
+
         // Create a new node and append it to the end of the list
         Node newNode = new Node(offer);
         if (head == null) {
@@ -92,7 +102,9 @@ public class OfferService {
         saveOffers(); // Persist updated list to file
     }
 
-    //check if offer already exsists
+    /**
+     * Check if an offer already exists by comparing ID or description.
+     */
     private boolean offerExists(Offer offer) {
         Node current = head;
         while (current != null) {
@@ -120,6 +132,7 @@ public class OfferService {
         } else {
             System.out.println("saveOffers: Saving offers to file...");
         }
+
         // Write each offer as a CSV line
         while (current != null) {
             Offer offer = current.offer;
@@ -132,6 +145,7 @@ public class OfferService {
         writer.close();
         System.out.println("saveOffers: Offers saved successfully.");
     }
+
     /**
      * Insert offer into linked list without saving to file (used during initial load).
      */
@@ -145,6 +159,7 @@ public class OfferService {
             current.next = newNode;
         }
     }
+
     /**
      * Retrieve all offers from the linked list as a list of Offer objects.
      */
@@ -273,4 +288,3 @@ public class OfferService {
         return nextId;
     }
 }
-

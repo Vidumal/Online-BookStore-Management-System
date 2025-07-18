@@ -1,8 +1,8 @@
-package com.example.Online_Book_Store.controller;
+package com.example.online_book_store.controller;
 
-import com.example.Online_Book_Store.constants.Constant;
-import com.example.Online_Book_Store.model.Offer;
-import com.example.Online_Book_Store.service.OfferService;
+import com.example.online_book_store.constants.Constant;
+import com.example.online_book_store.model.Offer;
+import com.example.online_book_store.service.OfferService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,16 +11,13 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
+import java.nio.file.*;
 
 @Controller
 @RequestMapping("/offer")
 public class OfferController {
 
-    private static final String IMAGE_DIR = Constant.IMAGE_DIR;
+    private static final String IMAGE_DIR = Constant.IMAGE_DIR; // Make sure this is set correctly
 
     @Autowired
     private OfferService offerService;
@@ -33,6 +30,7 @@ public class OfferController {
         model.addAttribute("offers", offerService.getAllOffers());
         return "offer-list"; // JSP page to display all offers
     }
+
     @GetMapping
     public String Offers(Model model) throws IOException {
         offerService.loadOffers();
@@ -44,12 +42,12 @@ public class OfferController {
     // Show the Add Offer form
     @GetMapping("/add")
     public String showAddOfferForm(Model model) {
-        //creating objects
         Offer offer = new Offer(0, "", 0.0f, "", ""); // Add category and imagePath fields
         offer.setId(offerService.getNextId()); // Ensure the offer gets a valid ID
         model.addAttribute("offer", offer);
         return "add-offer"; // JSP page to add offer
     }
+
     // Add an offer
     @PostMapping("/add")
     public String addOffer(@ModelAttribute Offer offer,
@@ -142,6 +140,8 @@ public class OfferController {
         }
     }
 
+
+
     // Delete an offer
     @PostMapping("/delete/{id}")
     public String deleteOffer(@PathVariable int id) throws IOException {
@@ -149,4 +149,3 @@ public class OfferController {
         return "redirect:/offer/list";
     }
 }
-

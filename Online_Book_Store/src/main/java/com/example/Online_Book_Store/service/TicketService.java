@@ -1,6 +1,6 @@
-package com.example.Online_Book_Store.service;
+package com.example.online_book_store.service;
 
-import com.example.Online_Book_Store.model.Ticket;
+import com.example.online_book_store.model.Ticket;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -19,41 +19,12 @@ public class TicketService {
         Node next;
 
         Node(Ticket data) {
-
             this.data = data;
         }
     }
 
     // Head of the linked list containing all tickets
     private Node head;
-
-    // Adds a ticket node to the end of the linked list
-    private void append(Ticket t) {
-        Node node = new Node(t);
-        if (head == null) head = node;
-        else {
-            Node curr = head;
-            while (curr.next != null) curr = curr.next;
-            curr.next = node;
-        }
-    }
-
-    // Generates the next available numeric ID for a new ticket
-    public synchronized String getNextId() {
-        int nextId = 1;
-        Node curr = head;
-
-        // Traverse the linked list to find the highest existing ID
-        while (curr != null) {
-            int currentId = Integer.parseInt(curr.data.getId());
-            nextId = Math.max(nextId, currentId + 1);
-            curr = curr.next;
-        }
-
-        return String.valueOf(nextId);
-    }
-
-
 
     // Initializes the service by loading ticket data from file after bean creation
     @PostConstruct
@@ -83,6 +54,20 @@ public class TicketService {
         }
     }
 
+    // Generates the next available numeric ID for a new ticket
+    public synchronized String getNextId() {
+        int nextId = 1;
+        Node curr = head;
+
+        // Traverse the linked list to find the highest existing ID
+        while (curr != null) {
+            int currentId = Integer.parseInt(curr.data.getId());
+            nextId = Math.max(nextId, currentId + 1);
+            curr = curr.next;
+        }
+
+        return String.valueOf(nextId);
+    }
 
     // Adds a new ticket with a unique ID and persists it to the file
     public synchronized void addTicket(Ticket t) throws IOException {
@@ -164,7 +149,16 @@ public class TicketService {
 
     // ======================== Helper Methods ========================
 
-
+    // Adds a ticket node to the end of the linked list
+    private void append(Ticket t) {
+        Node node = new Node(t);
+        if (head == null) head = node;
+        else {
+            Node curr = head;
+            while (curr.next != null) curr = curr.next;
+            curr.next = node;
+        }
+    }
 
     // Overwrites the ticket file with the current in-memory list
     private void overwrite() throws IOException {

@@ -1,7 +1,7 @@
-package com.example.Online_Book_Store.controller;
+package com.example.online_book_store.controller;
 
-import com.example.Online_Book_Store.model.Payment;
-import com.example.Online_Book_Store.service.PaymentService;
+import com.example.online_book_store.model.Payment;
+import com.example.online_book_store.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

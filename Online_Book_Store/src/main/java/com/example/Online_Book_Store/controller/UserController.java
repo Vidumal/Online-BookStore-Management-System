@@ -1,8 +1,8 @@
-package com.example.Online_Book_Store.controller;
+package com.example.online_book_store.controller;
 
 
-import com.example.Online_Book_Store.model.User;
-import com.example.Online_Book_Store.service.UserService;
+import com.example.online_book_store.model.User;
+import com.example.online_book_store.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,11 +14,15 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
+// use inheritence concerpt atomaticaly use in spring
 @Controller
+//this abstracting
 @RequestMapping("/users")
+// only use for user
 public class UserController {
-
+    // spring frame work payanpadutha (@controler) use pannurem
     @Autowired
+    // ploymorphisem
     private UserService userService;
 
     // Show register form
@@ -123,6 +127,11 @@ public class UserController {
             return "login";
         }
     }
+
+
+
+
+
 
 
     // Show logged-in user's role

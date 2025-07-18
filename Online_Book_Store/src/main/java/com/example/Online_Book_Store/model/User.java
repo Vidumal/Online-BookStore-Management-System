@@ -1,4 +1,4 @@
-package com.example.Online_Book_Store.model;
+package com.example.online_book_store.model;
 
 
 public class User {

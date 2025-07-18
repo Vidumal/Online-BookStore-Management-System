@@ -18,7 +18,7 @@
     <!-- Left Panel -->
     <div class="w-full md:w-1/2 bg-white flex flex-col justify-center items-center px-8 py-12">
         <div class="mb-8">
-            <img src="https://img.icons8.com/ios/100/user--v1.png" alt="Logo" class="h-13" />
+            <img src="https://via.placeholder.com/120x40?text=Logo" alt="Logo" class="h-10" />
         </div>
 
         <div class="max-w-sm w-full">
@@ -57,7 +57,7 @@
         <img src="https://cdn.pixabay.com/photo/2016/03/09/15/29/books-1246674_1280.jpg" alt="Scooter" class="w-full h-full object-cover"/>
     </div>
 </div>
-<%@ include file="footer.jsp" %>
+    <%@ include file="footer.jsp" %>
 
 </body>
 </html>

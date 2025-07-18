@@ -1,6 +1,6 @@
-package com.example.Online_Book_Store.service;
+package com.example.online_book_store.service;
 
-import com.example.Online_Book_Store.model.Payment;
+import com.example.online_book_store.model.Payment;
 import org.springframework.stereotype.Service;
 
 import java.io.BufferedWriter;
