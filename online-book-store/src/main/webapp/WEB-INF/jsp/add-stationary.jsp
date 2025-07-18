@@ -29,6 +29,7 @@
         </div>
       </c:if>
 
+<%--@elvariable id="stationary" type="org"--%>
 <form:form modelAttribute="stationary" method="post" action="${pageContext.request.contextPath}/stationary/add"
            enctype="multipart/form-data" class="space-y-5">
         <!-- ID (read-only) -->
