@@ -1,0 +1,10 @@
+1,HB Pencil,60,80.0,/images/1_FCDrawSet_pencils.jpg
+2,Ink Pen,30,150.0,/images/2_d5576c353d15bb052e6a38083c2cf593.jpg
+3,Mac Erasers,200,25.0,/images/3_d159700d2a7c6308643c544fbd884872.jpg
+4,Vanish Eraser,20,15.0,/images/4_vanish.jpeg
+5,Faber Ballpoint Pen,300,20.0,/images/5_d517edbb15fc93f16a3d8a325b661980-hi.jpg
+6,Exercise Books,200,150.0,/images/6_Exercise-Book.jpg
+7,Pencil Cutter,30,20.0,/images/7_Wooden-Pencil-Cutter.jpg
+8,Platignam,10,670.0,/images/8_platignam.jpeg
+9,Mapped Color Pencil,12,340.0,/images/9_71rBgP+FgoL.jpg
+10,Tube Colors,10,1300.0,/images/10_Front-53.jpg

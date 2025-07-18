@@ -1,0 +1,9 @@
+2,Ishani KPCDs,123456,ishani1@gmail.com,45,user,male
+3,Hansaka,1234,hansaka@gmail.com,18,user,male
+4,HansakaJsP,123,hansaka@gmail.com,24,admin,Female
+5,Kamal_P,123,kamal@gmail.com,24,user,male
+6,Supun,Supun@123,supun@gmail.com,21,user,male
+7,thabith,thabith123,m.t2004b.t@gmail.com,19,user,male
+8,mthabith,123456,ashrafthabith@gmail.com,21,user,male
+9,pavan,thabith1234,k.t2004r.t@gmail.com,12,user,male
+10,liman,123,ilman@gmail.com,19,user,male

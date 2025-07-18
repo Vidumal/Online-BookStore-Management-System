@@ -1,7 +1,0 @@
-9,10% off for Vijaya School Stationary Bundle,1200.0,stationary,/images/null_vijaya.jpeg
-5,20% Off for the Oxford Dictionary,1000.0,books,/images/5_IMG_8505-scaled.jpeg
-11,Save 20% When You Buy The Over Story Book,800.0,books,/images/null_s-l400.jpg
-4,30% Off for Atlas books 3 bundle,788.0,stationary,/images/4_50d01c62-b372-4963-b8c2-dcfdd2a8156d_1024.jpeg
-10,Buy All the Murmuring Bones Book and Save 30% and Get Free Color Pencil Pack,750.0,books_plus_stationary,/images/null_unnameddgfdg.jpg
-7,Free Atlas book with Wild Tree Book,560.0,books_plus_stationary,/images/null_2451449.5ceba99b8a529.jpeg
-8,Buy 2 exercise books and get 1 book free,230.0,stationary,/images/null_1-9.png
