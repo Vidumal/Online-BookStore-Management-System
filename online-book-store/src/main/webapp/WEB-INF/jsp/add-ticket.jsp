@@ -32,7 +32,6 @@
         </div>
       </c:if>
 
-      <%--@elvariable id="ticket" type="org"--%>
       <form:form modelAttribute="ticket" method="post" class="space-y-5">
         <!-- Hidden Fields -->
         <form:hidden path="id"/>
